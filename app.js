@@ -10,3 +10,10 @@ hamburger.addEventListener("click", () => {
      hamburger.classList.toggle('open');
   });
 });
+
+
+var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
+
+$(".send-report").bind(clickHandler, function(e) {
+    alert("clicked or tapped. This button used: " + clickHandler);
+});
