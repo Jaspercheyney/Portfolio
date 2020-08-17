@@ -483,6 +483,7 @@ nav li a:hover:after {
 		width: 100%;
 		background: none;
 		border: none;
+		z-index: 2;
 	}
 
 	.hamburger {
@@ -541,19 +542,19 @@ nav li a:hover:after {
 	}
 
 	.nav-links li:nth-child(1) {
-		animation-delay: calc((0 * 70ms) + 750ms);
+		animation-delay: calc((0 * 70ms) + 900ms);
 	}
 
 	.nav-links li:nth-child(2) {
-		animation-delay: calc((1 * 70ms) + 750ms);
+		animation-delay: calc((1 * 70ms) + 900ms);
 	}
 
 	.nav-links li:nth-child(3) {
-		animation-delay: calc((2 * 70ms) + 750ms);
+		animation-delay: calc((2 * 70ms) + 900ms);
 	}
 
 	.nav-links li:nth-child(4) {
-		animation-delay: calc((3 * 70ms) + 750ms);
+		animation-delay: calc((3 * 70ms) + 900ms);
 	}
 
 	nav li:first-child {
