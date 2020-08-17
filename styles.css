@@ -123,12 +123,23 @@ nav {
 	background-repeat: no-repeat;
 	width: 40px;
     height: 40px;
-    transition: 250ms ease;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+	display: block;
+	width: 40px;
+	height: 40px;
 }
 
 .logo:hover {
 	cursor: pointer;
 /*	transform: scale(1.05);*/
+}
+
+.logo a:after {
+	display: none;
 }
 
 .nav-links {
