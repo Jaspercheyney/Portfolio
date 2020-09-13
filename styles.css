@@ -202,12 +202,26 @@ nav li a:hover:after {
 }
 
 .hero {
-	height: 632px;
+	height: 560px;
 	align-items: center;
 }
 
 .hero h1 {
 	max-width: 900px;
+}
+
+.project-dark {
+	background-color: #1C1C1E;
+	margin: var(--spacing-l) 0;
+}
+
+.project-light {
+	background-color: #F1F1F1;
+	margin: var(--spacing-l) 0;
+}
+
+.project-light .project-image {
+	    margin: var(--spacing-l) 0 var(--spacing-l) 0;
 }
 
 .project-container h3 {
@@ -217,7 +231,7 @@ nav li a:hover:after {
 .project-image {
 	display: block;
 	width: 100%;
-	margin: var(--spacing-l) 0 var(--spacing-l) 0;
+	margin: var(--spacing-l) 0 0 0;
 }
 
 .project-container p {
@@ -269,6 +283,19 @@ nav li a:hover:after {
 .success-metrics {
 	padding-bottom: var(--spacing-l);
 	border-bottom: 1px solid #F1F1F1;
+}
+
+.success-metrics a:after {
+	content: url('images/external-link.svg');
+	margin: 0 0 0 6px;
+}
+
+p.live-link {
+	padding: var(--spacing-s) 0 0 0;
+}
+
+.live-link a {
+	color: var(--black);
 }
 
 .success-icon {
@@ -560,8 +587,8 @@ nav li a:hover:after {
 	}
 
 	.nav-links.open {
-		clip-path: circle(1400px at 90% -10%);
-		-webkit-clip-path: circle(1400px at 90% -10%);
+		clip-path: circle(1800px at 90% -10%);
+		-webkit-clip-path: circle(1800px at 90% -10%);
 		pointer-events: all;
 	}
 
