@@ -19,19 +19,12 @@ function checkPosition() {
       
       // get the elements position
       var position = elements[i].getBoundingClientRect();
-      var positionBottom = position.bottom + 0;
       var positionTop = position.top + 50;
-
-      // checking whether fully visible
-      if(positionTop >= 0 && positionBottom <= window.innerHeight) {
-        console.log('Element is fully visible in screen');
-        element[i].classList.add('is-visible');
-      }
 
       // checking for partial visibility
       if(positionTop < window.innerHeight && positionBottom >= 0) {
         console.log('Element is partially visible in screen');
-        element[i].classList.add('is-visible');
+        elements[i].classList.add('is-visible');
       }
   }
 
