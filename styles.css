@@ -504,6 +504,18 @@ p.live-link {
 	color: var(--white);
 }
 
+@media (min-width: 1025px) {
+
+.show-on-scroll.is-visible {
+	opacity: 1;
+}
+
+.show-on-scroll {
+	opacity: 0;
+	transition: opacity 900ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+}
 /*Columns & Grid*/
 
 .wrapper {
