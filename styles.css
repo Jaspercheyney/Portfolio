@@ -625,14 +625,16 @@ p.live-link {
 		background: none;
 		border: none;
 		z-index: 2;
+		pointer-events: none;
 	}
 
 	.hamburger {
 		position: absolute;
 		cursor: pointer;
 		right: var(--spacing-s);
-		z-index: 1;
+		z-index: 3;
 		margin-top: var(--spacing-xs);
+		pointer-events: auto;
 	}
 
 	.hamburger.open .line:nth-child(1) {
