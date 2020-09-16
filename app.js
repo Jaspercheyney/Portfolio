@@ -6,6 +6,13 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle("open");
 });
 
+document.querySelectorAll('.nav-links li a').forEach(item => {
+  item.addEventListener('click', event => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle("open");
+  })
+})
+
 // get all the elements
 elements = document.getElementsByClassName('show-on-scroll');
 
