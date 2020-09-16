@@ -41,4 +41,5 @@ function debounce(func, wait = 10, immediate = true) {
   };
 };
 
+checkPosition()
 window.addEventListener('scroll', debounce(checkPosition));
