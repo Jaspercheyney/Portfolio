@@ -19,6 +19,7 @@ function checkPosition() {
       
       // get the elements position
       var position = elements[i].getBoundingClientRect();
+      var positionBottom = position.bottom + 0;
       var positionTop = position.top + 50;
 
       // checking for partial visibility
