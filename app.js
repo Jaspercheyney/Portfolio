@@ -20,7 +20,6 @@ function checkPosition() {
 
       // checking for partial visibility
       if(positionTop < window.innerHeight && positionBottom >= 0) {
-        console.log('Element is partially visible in screen');
         elements[i].classList.add('is-visible');
       }
   }
