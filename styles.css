@@ -229,6 +229,10 @@ nav li a:hover:after {
 	margin: var(--spacing-xl) 0;
 }
 
+.project-transparent {
+	margin: var(--spacing-m) 0;
+}
+
 .bottom-gap img{
 	margin: var(--spacing-l) 0 var(--spacing-l) 0;
 }
@@ -245,6 +249,12 @@ nav li a:hover:after {
 	display: block;
 	width: 100%;
 	margin: var(--spacing-l) 0 0 0;
+}
+
+.about-image {
+	display: block;
+	width: 100%;
+	margin: var(--spacing-l) 0 var(--spacing-l) 0;
 }
 
 .project-column {
@@ -362,6 +372,10 @@ p.live-link {
 	text-decoration: none;
 }
 
+.photos {
+	padding-top: var(--spacing-l);
+}
+
 .blur-hover {
 	overflow: hidden;
 	position: relative;
@@ -388,6 +402,12 @@ p.live-link {
 	width: 100%;
 	transition: all 0.45s ease;
 	backface-visibility: hidden;
+}
+
+.photo-card img {
+	display: block;
+	height: 100%;
+	width: 100%;
 }
 
 .project-card h3 {
