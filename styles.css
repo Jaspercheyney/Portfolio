@@ -695,6 +695,10 @@ p.live-link {
 		padding-left: 24px;
 	}
 
+	.nav-links li.logo, .nav-links li.logo a {
+	padding: 0;
+	}
+
 	.nav-links li:nth-child(1) {
 		animation-delay: calc((0 * 70ms) + 900ms);
 	}
