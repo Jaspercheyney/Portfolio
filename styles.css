@@ -492,7 +492,7 @@ p.live-link {
 }
 
 .temp-height {
-	height: 80vh;
+	min-height: 100vh;
 }
 
 .social-links {
