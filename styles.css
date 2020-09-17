@@ -170,7 +170,7 @@ nav li:first-child {
 	padding-left: 0;
 }
 
-nav li a, .cta, .footer-cta a, .fixed-cta a {
+nav li, nav li a, .cta, .footer-cta a, .fixed-cta a {
 	font-family: 'Inter', sans-serif;
 	font-size: 14px;
 	color: var(--black);
@@ -194,6 +194,59 @@ nav li a:after {
 nav li a:hover:after {
 	transform: scaleX(1);
 /*	opacity: 1.0;*/
+}
+
+.darkmode {
+	margin-left: auto;
+}
+
+.darkmode img {
+	padding: 0;
+}
+
+.nav-links .darkmode {
+	padding: 0;
+}
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-tooltip]:before {
+  position: absolute;
+  bottom: -300%;
+  left: -33%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 180px;
+  background-color: #fff;
+  color: #000;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: 200ms ease-in-out;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  transition: 200ms ease-in-out;
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
 }
 
 .cta {
@@ -646,6 +699,10 @@ p.live-link {
 		border: none;
 		z-index: 2;
 		pointer-events: none;
+	}
+
+	.nav-links li:last-child {
+		display: none;
 	}
 
 	.hamburger {
