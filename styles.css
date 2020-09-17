@@ -225,8 +225,8 @@ nav li a:hover:after {
 
 [data-tooltip]:before {
   position: absolute;
-  bottom: -300%;
-  left: -33%;
+  bottom: -97%;
+  left: -500%;
   margin-bottom: 5px;
   margin-left: -80px;
   padding: 7px;
