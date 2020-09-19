@@ -14,7 +14,7 @@ hamburger.addEventListener('ontouchstart', handleMenuToggle, false);
 // Event listener for nav links
 document.querySelectorAll('.nav-links li a').forEach(item => {
   item.addEventListener('click', event => {
-      handleMenuToggle
+      handleMenuToggle(event)
   })
 })
 
