@@ -9,17 +9,9 @@
   <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="icon" type="image/png" href="favicon.ico"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79519538-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-79519538-1');
-  </script>
   <meta property="og:image" content="https://jaspercheyney.co.uk/images/social-preview.png"/>
   <meta property="og:title" content="Jasper Cheyney • Lead Designer"/>
   <meta property="og:description" content="I specialise in designing minimal, effective digital products."/>
-
   </head>
   <body>
     
@@ -38,7 +30,7 @@
     		<li><a href="#projects">Projects</a></li>
     		<li><a href="https://jaspercheyney.co.uk/playground">Playground</a></li>
     		<li><a href="https://jaspercheyney.co.uk/about">About</a></li>
-        <li data-tooltip="Dark Mode coming soon" class="darkmode"><img src="images/icon-darkmode.svg" alt="A toggle button to activate Dark Mode"></li>
+        <li class="dark-mode-icon" onclick="themeToggle()"><img src="images/icon-darkmode.svg" alt="A toggle button to activate Dark Mode"></li>
 		  </ul>
     </nav>
 </div>
@@ -52,14 +44,14 @@
              <h3>I specialise in designing <u>minimal</u>, <u>effective</u> digital products.</h3>
         </div>
 
-        <div class="col-12-lrg show-on-scroll">
+        <div class="col-12-lrg">
           <div class="projects" id="projects">
-            <div class="project-card"><a href="https://jaspercheyney.co.uk/treatwell"><div class="blur-hover"><img src="images/treatwell/project-treatwell.png" alt="Treatwell project"><h5>View project</h5></div><h3>Treatwell</h3></a></div>
-            <div class="project-card"><a href="https://jaspercheyney.co.uk/bacardi"><div class="blur-hover"><img src="images/bacardi/project-bacardi.png" alt="Bacardi Stillhouse project"><h5>View project</h5></div><h3>Bacardi</h3></a></div>
-            <div class="project-card"><a href="https://jaspercheyney.co.uk/sage"><div class="blur-hover"><img src="images/sage/project-sage.png" alt="Sage project"><h5>View project</h5></div><h3>Sage</h3></a></div>
-            <div class="project-card"><a href="https://jaspercheyney.co.uk/lindy"><div class="blur-hover"><img src="images/lindy/project-lindy.png" alt="project-placeholder"><h5>View project</h5></div><h3>LINDY</h3></a></div>
-            <div class="project-card"><a href="https://jaspercheyney.co.uk/thingstream"><div class="blur-hover"><img src="images/thingstream/project-thingstream.png" alt="Thingstream project"><h5>View project</h5></div><h3>Thingstream</h3></a></div>
-            <div class="project-card"><a href="https://jaspercheyney.co.uk/bravo"><div class="blur-hover"><img src="images/bravo/project-bravo.png" alt="Bravo project"><h5>View project</h5></div><h3>Bravo</h3></a></div>
+            <div class="project-card show-on-scroll"><a href="https://jaspercheyney.co.uk/treatwell"><div class="blur-hover"><img src="images/treatwell/project-treatwell.png" alt="Treatwell project"><h5>View project</h5></div><h3>Treatwell</h3></a></div>
+            <div class="project-card show-on-scroll"><a href="https://jaspercheyney.co.uk/bacardi"><div class="blur-hover"><img src="images/bacardi/project-bacardi.png" alt="Bacardi Stillhouse project"><h5>View project</h5></div><h3>Bacardi</h3></a></div>
+            <div class="project-card show-on-scroll"><a href="https://jaspercheyney.co.uk/sage"><div class="blur-hover"><img src="images/sage/project-sage.png" alt="Sage project"><h5>View project</h5></div><h3>Sage</h3></a></div>
+            <div class="project-card show-on-scroll"><a href="https://jaspercheyney.co.uk/lindy"><div class="blur-hover"><img src="images/lindy/project-lindy.png" alt="project-placeholder"><h5>View project</h5></div><h3>LINDY</h3></a></div>
+            <div class="project-card show-on-scroll"><a href="https://jaspercheyney.co.uk/thingstream"><div class="blur-hover"><img src="images/thingstream/project-thingstream.png" alt="Thingstream project"><h5>View project</h5></div><h3>Thingstream</h3></a></div>
+            <div class="project-card show-on-scroll"><a href="https://jaspercheyney.co.uk/bravo"><div class="blur-hover"><img src="images/bravo/project-bravo.png" alt="Bravo project"><h5>View project</h5></div><h3>Bravo</h3></a></div>
           </div>
         </div>
         </div>
@@ -138,6 +130,13 @@
 </div>
 
   <script src="app.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-79519538-1');
+  </script>
 
   </body>
 </html>
