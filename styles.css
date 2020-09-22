@@ -1,4 +1,8 @@
 /*Global*/
+.no-animate,
+.no-animate > * {
+	transition: none !important;
+}
 
 :root {
 	--black: #000000;

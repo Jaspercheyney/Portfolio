@@ -60,13 +60,15 @@ window.addEventListener('scroll', debounce(checkPosition));
 // Dark Mode
 
 // On page load set the theme.
-(function() {
-  let onpageLoad = localStorage.getItem("theme") || "";
-  let element = document.body;
-  element.classList.add(onpageLoad);
-  document.getElementById("theme").textContent =
-    localStorage.getItem("theme") || "light";
-})();
+
+window.addEventListener('load', (event) => {
+  // let onpageLoad = localStorage.getItem("theme") || "";
+  // let element = document.body;
+  // element.classList.add(onpageLoad);
+  // document.getElementById("theme").textContent =
+  //     localStorage.getItem("theme") || "light";
+});
+
 
 function themeToggle() {
   let element = document.body;
@@ -79,5 +81,5 @@ function themeToggle() {
     localStorage.setItem("theme", "dark-mode");
   }
 
-  document.getElementById("theme").textContent = localStorage.getItem("theme");
+  //document.getElementById("theme").textContent = localStorage.getItem("theme");
 }

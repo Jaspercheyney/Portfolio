@@ -6,16 +6,23 @@
   <meta name="Description" content="I specialise in designing minimal, effective digital products.">
     <title>Jasper Cheyney • Lead Designer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" type="text/css">
   <link rel="icon" type="image/png" href="favicon.ico"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-79519538-1"></script>
   <meta property="og:image" content="https://jaspercheyney.co.uk/images/social-preview.png"/>
   <meta property="og:title" content="Jasper Cheyney • Lead Designer"/>
   <meta property="og:description" content="I specialise in designing minimal, effective digital products."/>
   </head>
-  <body>
-    
-<div class="navigation">
+  <body class="no-animate">
+  <script>
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    element.classList.add(onpageLoad);
+    element.classList.remove('no-animate');
+  </script>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+
+
+  <div class="navigation">
 <div class="wrapper">
 <div class="container">
     <nav>
@@ -139,4 +146,5 @@
   </script>
 
   </body>
+
 </html>
