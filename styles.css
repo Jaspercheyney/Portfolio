@@ -1,7 +1,7 @@
 /*Global*/
-.no-animate,
-.no-animate > * {
-	transition: none !important;
+
+.no-animate {
+	transition: none;
 }
 
 :root {
@@ -22,14 +22,30 @@
 	--spacing-xl: 112px;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav, nav li, nav li a, nav li img, nav li a:after,
+.cta,
+.footer-cta a,
+.fixed-cta, .fixed-cta a,
+p,
+.smaller-p,
+.blur-hover
+{
+    transition: all 400ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 html {
 	scroll-behavior: smooth;
-	background-color: black !important;
 }
 
 body {
 	margin: 0;
-	background-color: var(--white);
 }
 
 /*Typography*/
@@ -111,6 +127,7 @@ p {
 	padding: var(--spacing-l) 0 48px 0;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
+
 }
 
 /*General Styles*/
@@ -122,7 +139,6 @@ ul {
 
 nav {
 	height: 100px;
-	background: var(--white);
 }
 
 .logo {
@@ -185,6 +201,7 @@ nav li a:after {
     margin-top: 3px;
     transform: scaleX(0);
     transform-origin: left;
+    transition: transform 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 nav li a:hover:after {
@@ -203,6 +220,7 @@ nav li a:hover:after {
 }
 
 .dark-mode {
+	background-color: #101010;
 	--black: #F5F5F7;
 	--light-black: #1A1A1A;
 	--dark-grey: #767676;
@@ -210,6 +228,31 @@ nav li a:hover:after {
 	--light-grey: #1A1A1A;
 	--white: #101010;
 	-webkit-font-smoothing: antialiased;
+}
+
+.show-on-light-mode {
+	transition: opacity 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition-delay: 0ms;
+	opacity: 1;
+}
+
+.show-on-dark-mode {
+	margin-left: -100%;
+	transition: opacity 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition-delay: all 325ms;
+	opacity: 0;
+}
+
+.dark-mode .show-on-dark-mode {
+	transition: opacity 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition-delay: 0ms;
+	opacity: 1;
+}
+
+.dark-mode .show-on-light-mode {
+	transition: opacity 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition-delay: all 325ms;
+	opacity: 0;
 }
 
 .dark-mode .footer h2 {
@@ -418,6 +461,7 @@ p.live-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: var(--grey);
 }
 
 .blur-hover h5 {
@@ -425,7 +469,6 @@ p.live-link {
 	opacity: 0;
 	color: var(--white);
 	transition: all 0.45s ease;
-
 }
 
 .project-card:hover h5 {
@@ -436,8 +479,8 @@ p.live-link {
 	display: block;
 	height: 100%;
 	width: 100%;
-	transition: all 0.45s ease;
 	backface-visibility: hidden;
+	transition: filter 0.45s ease;
 }
 
 .photo-card img {
@@ -524,7 +567,6 @@ p.live-link {
 	background-color: var(--white);
 	width: 168px;
 	height: 48px;
-	transition: 150ms ease-in-out;
 }
 
 .footer-cta a, .fixed-cta a {
@@ -534,7 +576,6 @@ p.live-link {
     height: 100%;
     text-align: center;
     line-height: 3.4;
-    transition: all 400ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .fixed-cta {
@@ -548,13 +589,7 @@ p.live-link {
 	right: 0;
 	bottom: 0;
 	margin: 24px;
-	transition: 150ms ease-in-out;
 	z-index: 1;
-}
-
-.fixed-cta:hover, .footer-cta:hover {
-	transition: 150ms ease-in-out;
-	/*transform: translateY(-4px);*/
 }
 
 .fixed-cta a {
