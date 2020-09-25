@@ -21,6 +21,14 @@
   <meta property="og:description" content="I specialise in designing minimal, effective digital products."/>
   </head>
   <body>
+  <script>
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    if (element && onpageLoad) {
+        element.classList.add(onpageLoad);
+        element.classList.remove('no-animate');
+    }
+  </script>
 
 <div class="navigation">
 <div class="wrapper">
@@ -37,7 +45,7 @@
         <li><a href="https://jaspercheyney.co.uk/#projects">Projects</a></li>
         <li><a href="https://jaspercheyney.co.uk/playground">Playground</a></li>
         <li><a href="https://jaspercheyney.co.uk/about">About</a></li>
-        <li data-tooltip="Dark Mode coming soon" class="darkmode"><img src="images/icon-darkmode.svg" alt="A toggle button to activate Dark Mode"></li>
+        <li class="dark-mode-toggle" onclick="themeToggle()"><div class="dark-mode-icon"></div></li>
       </ul>
     </nav>
 </div>
@@ -50,7 +58,6 @@
           <div class="project-title">
             <h1>About</h1>
           </div>
-
         </div>
         <h3>Hi, my name is Jasper Cheyney.</h3>
         <p>I'm a English product designer living in Brighton, England. I currently lead the brilliant design team at Pragmatic, a Brighton based digital agency. I built my first website at the age of 12 and from that point fell in love with all aspects of design. I have a strong appreciation for minimal, focused design and firmly believe when it comes to user experience, less is more.

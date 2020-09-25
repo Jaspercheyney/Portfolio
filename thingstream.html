@@ -21,7 +21,14 @@
   <meta property="og:description" content="I specialise in designing minimal, effective digital products."/>
   </head>
   <body>
-
+  <script>
+    let onpageLoad = localStorage.getItem("theme") || "";
+    let element = document.body;
+    if (element && onpageLoad) {
+        element.classList.add(onpageLoad);
+        element.classList.remove('no-animate');
+    }
+  </script>
 <div class="navigation">
 <div class="wrapper">
 <div class="container">
@@ -37,7 +44,7 @@
         <li><a href="https://jaspercheyney.co.uk/#projects">Projects</a></li>
         <li><a href="https://jaspercheyney.co.uk/playground">Playground</a></li>
         <li><a href="https://jaspercheyney.co.uk/about">About</a></li>
-        <li data-tooltip="Dark Mode coming soon" class="darkmode"><img src="images/icon-darkmode.svg" alt="A toggle button to activate Dark Mode"></li>
+        <li class="dark-mode-toggle" onclick="themeToggle()"><div class="dark-mode-icon"></div></li>
       </ul>
     </nav>
 </div>

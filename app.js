@@ -55,3 +55,20 @@ function debounce(func, wait = 10, immediate = true) {
 
 checkPosition()
 window.addEventListener('scroll', debounce(checkPosition));
+
+
+// Dark Mode
+
+// On page load set the theme.
+
+function themeToggle() {
+  let element = document.body;
+  element.classList.toggle("dark-mode");
+
+  let theme = localStorage.getItem("theme");
+  if (theme && theme === "dark-mode") {
+    localStorage.setItem("theme", "");
+  } else {
+    localStorage.setItem("theme", "dark-mode");
+  }
+}
