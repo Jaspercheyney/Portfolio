@@ -253,7 +253,7 @@ nav li a:hover:after {
 	color: var(--white);
 }
 
-.dark-mode .logo, .dark-mode .success-metrics img, .success-metrics a:before, .success-metrics a:hover:after {
+.dark-mode .logo, .dark-mode .success-metrics img, .dark-mode .success-metrics a:before, .dark-mode .success-metrics a:hover:after {
 	filter: invert(96%) sepia(3%) saturate(89%) hue-rotate(201deg) brightness(101%) contrast(96%);
 }
 
