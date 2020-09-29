@@ -97,17 +97,3 @@ window.onscroll = function() {
     document.getElementById("dark-mode-svg").setAttribute("d", "M12 24C18.6274 24 24 18.6274 24 12C24 8.69378 22.6629 5.69986 20.5 3.52946C18.3273 1.34923 15.3212 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z")
     document.getElementById("dark-mode-svg").setAttribute("fill", "#F5F5F7")
   }
-
-// var darkmodeToggle = document.getElementById("darkmodeToggle")
-
-// darkmodeToggle.addEventListener('click', function() {
-    
-
-//     if (darkmodeToggle.classList.contains('dark')) {
-
-//       darkmodeToggle.classList.remove('dark');
-//   } else {
-
-//       darkmodeToggle.classList.add('dark'); // give it a class so it knows the diff
-//   }
-// })

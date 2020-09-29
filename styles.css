@@ -327,6 +327,10 @@ nav li a:hover:after {
 	margin-bottom: var(--spacing-m);
 }
 
+.project-container .project-single h5 {
+	font-size: 18px;
+}
+
 .project-image {
 	display: block;
 	width: 100%;
@@ -1034,6 +1038,7 @@ a.social:hover {
 	    transform:translateX(-50%);	
 		top: 0px;
 		transition: top 0.45s ease;
+		z-index: 1;
 	}
 
 	.navigation {
