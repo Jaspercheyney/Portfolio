@@ -31,6 +31,7 @@ h5,
 h6,
 nav, nav li, nav li a, nav li img, nav li a:after,
 .cta,
+.footer,
 .footer-cta a,
 .fixed-cta, .fixed-cta a,
 p,
@@ -41,7 +42,9 @@ p a,
 .success-metrics,
 .success-metrics img,
 .success-metrics a:before,
-.success-metrics a:hover:after
+.success-metrics a:hover:after,
+.project-light,
+.project-dark
 {
     transition: opacity, color, background-color, 400ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -309,6 +312,22 @@ nav li a:hover:after {
 .project-light {
 	background-color: var(--light-grey);
 	margin: var(--spacing-xl) 0;
+}
+
+.slate {
+	margin: 0 0 var(--spacing-l) 0;
+}
+
+.slate .project-light {
+	margin: var(--spacing-l) 0 0 0;
+}
+
+.slate .project-image {
+	margin: 0;
+}
+
+.slate .project-container h3 {
+	margin: var(--spacing-l) 0 var(--spacing-m) 0;
 }
 
 .project-transparent {
@@ -628,10 +647,6 @@ a.social:hover {
 	align-items: center;
 	z-index: 2;
     position: relative;
-}
-
-.temp-height {
-	min-height: 100vh;
 }
 
 .social-links {
