@@ -330,10 +330,6 @@ nav li a:hover:after {
 	margin: var(--spacing-l) 0 var(--spacing-m) 0;
 }
 
-.project-transparent {
-	margin: var(--spacing-m) 0;
-}
-
 .bottom-gap img {
 	margin: var(--spacing-l) 0 var(--spacing-l) 0;
 }
