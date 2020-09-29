@@ -56,7 +56,6 @@ function debounce(func, wait = 10, immediate = true) {
 checkPosition()
 window.addEventListener('scroll', debounce(checkPosition));
 
-
 // Dark Mode
 
 // On page load set the theme.
@@ -65,10 +64,50 @@ function themeToggle() {
   let element = document.body;
   element.classList.toggle("dark-mode");
 
+    var animationToSun = document.getElementById("animation-to-sun")
+    var animationToWhite = document.getElementById("animation-to-white")
+    var animationToMoon = document.getElementById("animation-to-moon")
+    var animationToBlack = document.getElementById("animation-to-black")
+
   let theme = localStorage.getItem("theme");
   if (theme && theme === "dark-mode") {
     localStorage.setItem("theme", "");
-  } else {
+      animationToMoon.beginElement();
+      animationToBlack.beginElement();
+  } else {      
+    animationToSun.beginElement();
+    animationToWhite.beginElement();
     localStorage.setItem("theme", "dark-mode");
   }
 }
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+  if (document.body.classList.contains("dark-mode")) {
+    document.getElementById("dark-mode-svg").setAttribute("d", "M12 24C18.6274 24 24 18.6274 24 12C24 8.69378 22.6629 5.69986 20.5 3.52946C18.3273 1.34923 15.3212 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z")
+    document.getElementById("dark-mode-svg").setAttribute("fill", "#F5F5F7")
+  }
+
+// var darkmodeToggle = document.getElementById("darkmodeToggle")
+
+// darkmodeToggle.addEventListener('click', function() {
+    
+
+//     if (darkmodeToggle.classList.contains('dark')) {
+
+//       darkmodeToggle.classList.remove('dark');
+//   } else {
+
+//       darkmodeToggle.classList.add('dark'); // give it a class so it knows the diff
+//   }
+// })

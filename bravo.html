@@ -30,7 +30,7 @@
     }
   </script>
 <div class="navigation">
-<div class="wrapper">
+<div id="navbar" class="wrapper">
 <div class="container">
     <nav>
       <div class="hamburger">
@@ -44,7 +44,16 @@
         <li><a href="https://jaspercheyney.co.uk/#projects">Projects</a></li>
         <li><a href="https://jaspercheyney.co.uk/playground">Playground</a></li>
         <li><a href="https://jaspercheyney.co.uk/about">About</a></li>
-        <li class="dark-mode-toggle" onclick="themeToggle()"><div class="dark-mode-icon"></div></li>
+        <li class="dark-mode-toggle" id="darkmodeToggle" onclick="themeToggle()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="dark-mode-svg" d="M12 24C18.6274 24 23 19.5 24 15.6C18.5 17.5 14.105 15.1973 11.65 13C5.5 7 8.4 0 8.4 0C4 1.5 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#000000">
+          <animate id="animation-to-sun" begin="indefinite" attributeName="d" dur="400ms" to="M12 24C18.6274 24 24 18.6274 24 12C24 8.69378 22.6629 5.69986 20.5 3.52946C18.3273 1.34923 15.3212 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="freeze"/>
+          <animate id="animation-to-white" begin="indefinite" attributeName="fill" to="#F5F5F7" dur="400ms" fill="freeze"/>
+          <animate id="animation-to-moon" begin="indefinite" attributeName="d" dur="400ms" to="M12 24C18.6274 24 23 19.5 24 15.6C18.5 17.5 14.105 15.1973 11.65 13C5.5 7 8.4 0 8.4 0C4 1.5 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="freeze"/>
+          <animate id="animation-to-black" begin="indefinite" attributeName="fill" to="#000000" dur="400ms" fill="freeze"/>
+          </path>
+          </svg>
+        </li>
       </ul>
     </nav>
 </div>
@@ -123,6 +132,64 @@
         </div>
 
         <p class="smaller-p">Did you enjoy this case study? <a href="mailto:jasper@cheyneymail.co.uk?subject=Hello!">Let me know</a></p>
+
+            <div class="projects show-on-scroll" id="projects">
+
+      <div class="project-card">
+        <a href="https://jaspercheyney.co.uk/treatwell">
+          <div class="project-single">
+            <div class="treatwell"><img src="images/project-placeholder-small.png" alt="Treatwell project"></div>
+            <h5>View project</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://jaspercheyney.co.uk/bacardi">
+          <div class="project-single">
+            <div class="bacardi"><img src="images/project-placeholder-small.png" alt="Bacardi project"></div>
+            <h5>View project</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://jaspercheyney.co.uk/sage">
+          <div class="project-single">
+            <div class="sage"><img src="images/project-placeholder-small.png" alt="Sage project"></div>
+            <h5>View project</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://jaspercheyney.co.uk/lindy">
+          <div class="project-single">
+            <div class="lindy"><img src="images/project-placeholder-small.png" alt="LINDY project"></div>
+            <h5>View project</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://jaspercheyney.co.uk/thingstream">
+          <div class="project-single">
+            <div class="thingstream"><img src="images/project-placeholder-small.png" alt="Thingstream project"></div>
+            <h5>View project</h5>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://jaspercheyney.co.uk/bravo">
+          <div class="project-single">
+            <div class="bravo"><img src="images/project-placeholder-small.png" alt="Bravo project"></div>
+            <h5>View project</h5>
+          </div>
+        </a>
+      </div>
+
+    </div>
 
       </div>
     </div>
