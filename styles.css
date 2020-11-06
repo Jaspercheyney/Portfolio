@@ -991,6 +991,11 @@ a.social:hover {
 		padding: calc(var(--spacing-xl)*2) 0 var(--spacing-l) 0;
 	}
 
+	#navbar.navbar-hide {
+		top: 0px;
+	}
+
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -1050,6 +1055,10 @@ a.social:hover {
 		top: 0px;
 		transition: top 0.45s ease;
 		z-index: 1;
+	}
+
+	#navbar.navbar-hide {
+		top: -100px;
 	}
 
 	.navigation {
