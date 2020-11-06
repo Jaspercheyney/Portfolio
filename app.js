@@ -9,6 +9,7 @@ var handleMenuToggle = function (event) {
 
 // Add our event listeners
 hamburger.addEventListener('click', handleMenuToggle, false);
+hamburger.addEventListener('ontouchstart', handleMenuToggle, false);
 
 // Event listener for nav links
 document.querySelectorAll('.nav-links li a').forEach(item => {
