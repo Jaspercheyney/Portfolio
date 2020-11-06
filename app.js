@@ -82,18 +82,18 @@ function themeToggle() {
 }
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-//   var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("navbar")
-//     .classList.remove('navbar-hide');
-//   } else {
-//         document.getElementById("navbar")
-//     .classList.add('navbar-hide');
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar")
+    .classList.remove('navbar-hide');
+  } else {
+        document.getElementById("navbar")
+    .classList.add('navbar-hide');
+  }
+  prevScrollpos = currentScrollPos;
+}
 
   if (document.body.classList.contains("dark-mode")) {
     document.getElementById("dark-mode-svg").setAttribute("d", "M12 24C18.6274 24 24 18.6274 24 12C24 8.69378 22.6629 5.69986 20.5 3.52946C18.3273 1.34923 15.3212 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z")
