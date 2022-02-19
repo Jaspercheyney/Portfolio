@@ -314,20 +314,16 @@ nav li a:hover:after {
 	margin: var(--spacing-xl) 0;
 }
 
-.slate {
+.playground {
 	margin: 0 0 var(--spacing-l) 0;
 }
 
-.slate .project-light {
+.playground .project-light {
 	margin: var(--spacing-l) 0 0 0;
 }
 
-.slate .project-image {
+.playground .project-image {
 	margin: 0;
-}
-
-.slate .project-container h3 {
-	margin: var(--spacing-l) 0 var(--spacing-m) 0;
 }
 
 .bottom-gap img {
