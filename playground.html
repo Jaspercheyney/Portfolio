@@ -88,7 +88,14 @@
         </div>
         <h3>Ether</h3>
         <p>Minimal, high resolution, soft gradient wallpapers for your phone.</p>
-        <p><a class="social" href="images/playground/JC-Ether-Wallpapers.zip" download="">Download</a></p>
+        <p>
+          <a class="social"
+          href="images/playground/JC-Ether-Wallpapers.zip"
+          onclick="gtag('event', 'Ether Downloads', { 'event_category': 'Download' } )"
+          download="">Download
+          </a>
+
+        </p>
       </div>
 
       <div class="playground show-on-scroll">
@@ -98,32 +105,13 @@
           </div>
         </div>
         <h3>Haze</h3>
-<script>
-
-    const downloadButton = document.querySelector('.social');
-
-    function triggerDownloadEventToGoogle(event) {
-        // stop any default behaviour
-        event.preventDefault();
-
-        // get the original link to use later
-        const url = event.target.attr('href')
-
-        // send the gtag event
-        gtag('event', 'Haze Downloads', { 'event_category': 'Download' } )
-
-        // redirect to the original
-        window.location.href = url
-    }
-
-    downloadButton.addEventListener( 'click', triggerDownloadEventToGoogle )
-
-</script>
-
-<p>Colourful, 8K, noisy gradient wallpapers for your computer. </p>
-<p>
-    <a class="social" href="https://www.dropbox.com/s/yrx563wtrit6xnn/JC-Haze-Wallpapers.zip?dl=0">Download</a>
-</p>
+          <p>Colourful, 8K, noisy gradient wallpapers for your computer.</p>
+          <p>
+              <a class="social"
+              href="https://www.dropbox.com/s/yrx563wtrit6xnn/JC-Haze-Wallpapers.zip?dl=0"
+              onclick="gtag('event', 'Haze Downloads', { 'event_category': 'Download' } )">Download
+              </a>
+          </p>
 
       </div>
 
