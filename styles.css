@@ -315,7 +315,7 @@ nav li a:hover:after {
 }
 
 .playground {
-	margin: 0 0 var(--spacing-l) 0;
+	margin: 0 0 var(--spacing-xl) 0;
 }
 
 .playground .project-light {
