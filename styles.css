@@ -495,16 +495,22 @@ nav li a:hover:after {
 	text-decoration: none;
 }
 
-.success-metrics a:before {
+/*.success-metrics a:before {
 	content: url('images/icon-globe.svg');
 	margin: 0 8px 0 0;
 	vertical-align: middle;
     line-height: normal;
+}*/
+
+.success-metrics a:after {
+	content: url('images/icon-link.svg');
+	margin: 0 0 0 6px;
+	vertical-align: middle;
+	line-height: normal;
 }
 
-.success-metrics a:hover:after {
-	content: url('images/icon-link.svg');
-	margin: 0 0 0 8px;
+.success-metrics a:hover {
+	text-decoration: underline;
 }
 
 p.live-link {
