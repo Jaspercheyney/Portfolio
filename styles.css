@@ -890,6 +890,10 @@ a.social:hover {
 		padding-bottom: 80px;
 	}
 
+	.skills h5 {
+		margin: 32px 0 20px 0;
+	}
+
 	.project-details {
 		row-gap: var(--spacing-s);
 	}
