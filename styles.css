@@ -383,21 +383,75 @@ nav li a:hover:after {
 
 .skills {
 	display: grid;
-	column-gap: var(--spacing-m);
+	column-gap: 95px;
 	grid-template-columns: repeat(1, 1fr);
 	row-gap: var(--spacing-xl);
 	padding-bottom: var(--spacing-xl);
 	width: 100%;
 }
 
-.skill-icon {
-	height: 32px;
-	width: 100%;
-	padding: 0 0 var(--spacing-xs) 0;
+/* Default (light mode) */
+.skill-image img.skill-1 {
+  content: url('images/skill-1.png');
+}
+.skill-image img.skill-2 {
+  content: url('images/skill-2.png');
+}
+.skill-image img.skill-3 {
+  content: url('images/skill-3.png');
 }
 
-.skill-icon img {
-	border-radius: 100px;
+/* Dark mode overrides */
+.dark-mode .skill-image img.skill-1 {
+  content: url('images/skill-1-dark.png');
+}
+.dark-mode .skill-image img.skill-2 {
+  content: url('images/skill-2-dark.png');
+}
+.dark-mode .skill-image img.skill-3 {
+  content: url('images/skill-3-dark.png');
+}
+
+.skill-image {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Light image stays in flow -> sets height */
+.skill-image img.light {
+  position: static;           /* key change */
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: opacity 400ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Dark image overlays and fades */
+.skill-image img.dark {
+  position: absolute;         /* only this one is absolute */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* optional, match your images */
+  opacity: 0;
+  transition: opacity 400ms 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 1;
+}
+
+/* Toggle */
+.dark-mode .skill-image img.light { opacity: 0; }
+.dark-mode .skill-image img.dark  { opacity: 1; }
+
+.skills h5 {
+	font-size: 24px;
+	line-height: 32px;
+	margin: 48px 0 20px 0;
+}
+
+.skills p {
+	color: var(--dark-grey);
+	line-height: 26px;
 }
 
 .dark-mode .skill-icon img {
@@ -804,7 +858,8 @@ a.social:hover {
 	}
 
 	.project-details, .skills {
-		row-gap: var(--spacing-s);
+		row-gap: 100px;
+		padding-bottom: 80px;
 	}
 
 	.project-details h4 {
@@ -969,14 +1024,11 @@ a.social:hover {
 
 	.status {
 		height: auto;
-	}
-
-	.status h2 {
-		padding: var(--spacing-l) var(--spacing-m);
+		margin: 32px 0 80px 0;
 	}
 
 	.what-i-do h2 {
-		padding-bottom: var(--spacing-l);
+		padding-bottom: var(--spacing-xl);
 	}
 
 	.success-metrics {
@@ -989,7 +1041,7 @@ a.social:hover {
 
 	.footer {
 		height: auto;
-		padding: calc(var(--spacing-xl)*2) 0 var(--spacing-l) 0;
+		padding: calc(var(--spacing-xl)*2) 0 calc(var(--spacing-l)*2) 0;
 	}
 
 	#navbar.navbar-hide {
@@ -1073,6 +1125,6 @@ a.social:hover {
 	}
 	
 	.skills {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
